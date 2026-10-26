@@ -61,7 +61,8 @@ class App {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       const html = await r.text();
       const base = new URL(template.url, location.href).href;
-      $('#vistaTitulo').textContent = template.nombre;
+      const vistaTitulo = $('#vistaTitulo');
+      if (vistaTitulo) vistaTitulo.textContent = template.nombre;
       $('#vistaFrame').srcdoc = this.addBaseToHtml(html, base);
       this.modalPreview.show();
     } catch (err) {
