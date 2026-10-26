@@ -1,0 +1,67 @@
+/* Configuración de la aplicación */
+export const CONFIG = {
+  CREAWEB_URL: 'https://creaweb.chach.app',
+  FORMSPREE: 'https://formspree.io/f/xrengvqb',
+  DOMINIO: 'empresagt.com',
+  LIMITE_HTML: 900000,
+  STORE_KEY: 'creaweb_estado_v1',
+  RESERVADOS: ['www', 'admin', 'mail', 'correo', 'ftp', 'api', 'app', 'panel', 'creaweb', 'soporte', 'ayuda', 'test'],
+  TEMPLATES: [
+    { nombre: 'Restaurante', icon: 'utensils', url: 'https://restarweb.chach.app', plantillasCount: 20 },
+    { nombre: 'Hotel o Hospedaje', icon: 'bed', url: 'https://hospedweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Transporte y logística', icon: 'truck', url: 'https://transportweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Cafetería', icon: 'coffee', url: 'https://cofweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Panadería', icon: 'utensils', url: 'https://panweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Tienda en linea', icon: 'shirt', url: 'https://ecomerweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Salón de belleza', icon: 'scissors', url: 'https://spaweb.chach.app', plantillasCount: 15 },
+    { nombre: 'Clínica y salud', icon: 'heart', url: 'https://clinicweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Bufet de Abogados', icon: 'scale', url: 'https://abogweb.chach.app', plantillasCount: 15 },
+    { nombre: 'Inmobiliaria y terrenos', icon: 'home', url: 'https://inmoweb.chach.app', plantillasCount: 12 },
+    { nombre: 'Gym', icon: 'activity', url: 'https://gymweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Establecimientos Educativos', icon: 'cap', url: 'https://eduweb.chach.app', plantillasCount: 13 },
+    { nombre: 'Fibra óptica y Tecnología', icon: 'laptop', url: 'https://fibweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Fotografo', icon: 'camera', url: 'https://fotogweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Construcción', icon: 'building', url: 'https://construweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Taller de Mecánica', icon: 'car', url: 'https://mecaweb.chach.app', plantillasCount: 9 },
+    { nombre: 'Locución y Eventos', icon: 'sparkles', url: 'https://eventweb.chach.app', plantillasCount: 11 },
+    { nombre: 'Ferretería', icon: 'wrench', url: 'https://ferretweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Oficina Contable', icon: 'calculator', url: 'https://ofiweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Consultoría', icon: 'clipboard', url: 'https://consweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Barbería', icon: 'barber', url: 'https://barberweb.chach.app', plantillasCount: 9 },
+    { nombre: 'Tours y viajes', icon: 'compass', url: 'https://toursweb.chach.app', plantillasCount: 14 },
+    { nombre: 'Car wash', icon: 'droplets', url: 'https://carweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Lavandería', icon: 'washer', url: 'https://lavweb.chach.app', plantillasCount: 8 },
+    { nombre: 'Veterinaria', icon: 'paw', url: 'https://vetweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Farmacia', icon: 'pill', url: 'https://farmaweb.chach.app', plantillasCount: 12 },
+    { nombre: 'Miscelánea o minimarket', icon: 'store', url: 'https://Miscweb.chach.app', plantillasCount: 11 },
+    { nombre: 'Pet shop', icon: 'paw', url: 'https://petweb.chach.app', plantillasCount: 7 },
+    { nombre: 'Limpieza', icon: 'droplets', url: 'https://limpweb.chach.app', plantillasCount: 9 },
+    { nombre: 'Seguros', icon: 'shield', url: 'https://seguweb.chach.app', plantillasCount: 8 },
+    { nombre: 'Artesanías', icon: 'pen', url: 'https://artweb.chach.app', plantillasCount: 6 },
+    { nombre: 'Jardín y jardín', icon: 'leaf', url: 'https://gardennweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Carpintería', icon: 'building', url: 'https://carperweb.chach.app', plantillasCount: 13 },
+    { nombre: 'Agro', icon: 'seedling', url: 'https://agroweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Granja', icon: 'paw', url: 'https://granjaweb.chach.app', plantillasCount: 9 },
+    { nombre: 'Cevichería', icon: 'droplets', url: 'https://ceviweb.chach.app', plantillasCount: 8 },
+    { nombre: 'Electricista', icon: 'zap', url: 'https://elecweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Bares', icon: 'glasses', url: 'https://barweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Biblioteca', icon: 'book', url: 'https://libweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Gimnasio CrossFit', icon: 'dumbbell', url: '', plantillasCount: 8 },
+    { nombre: 'Pintor', icon: 'pen', url: 'https://pinweb.chach.app', plantillasCount: 9 },
+    { nombre: 'Reparación de equipos', icon: 'wrench', url: 'https://reparweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Venta de celulares', icon: 'phone', url: 'https://celuweb.chach.app', plantillasCount: 12 }
+  ]
+};
+
+export const SOCIAL_PATTERNS = /(facebook\.com|fb\.com|instagram\.com|tiktok\.com|wa\.me|whatsapp\.com|twitter\.com|x\.com|youtube\.com|youtu\.be|linkedin\.com|t\.me|telegram)/i;
+
+export const SOCIAL_NAMES = [
+  [/facebook|fb\.com/i, 'Facebook'],
+  [/instagram/i, 'Instagram'],
+  [/tiktok/i, 'TikTok'],
+  [/wa\.me|whatsapp/i, 'WhatsApp'],
+  [/twitter|x\.com/i, 'X / Twitter'],
+  [/youtube|youtu\.be/i, 'YouTube'],
+  [/linkedin/i, 'LinkedIn'],
+  [/t\.me|telegram/i, 'Telegram']
+];
