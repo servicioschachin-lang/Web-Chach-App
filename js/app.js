@@ -57,13 +57,12 @@ class App {
 
   async previewTemplate(template) {
     try {
-      const r = await fetch(template.url);
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      const html = await r.text();
-      const base = new URL(template.url, location.href).href;
       const vistaTitulo = $('#vistaTitulo');
       if (vistaTitulo) vistaTitulo.textContent = template.nombre;
-      $('#vistaFrame').srcdoc = this.addBaseToHtml(html, base);
+      const vistaFrame = $('#vistaFrame');
+      if (!vistaFrame) throw new Error('Iframe de vista previa no encontrado');
+      // Cargar el iframe directamente evita problemas de CORS con dominios externos
+      vistaFrame.src = template.url;
       this.modalPreview.show();
     } catch (err) {
       this.showNotification('No se pudo cargar la plantilla. Revisa tu conexión.');

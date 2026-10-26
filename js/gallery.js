@@ -34,7 +34,7 @@ export class Gallery {
       const ok = !!t.url;
       const count = (t.plantillasCount != null) ? t.plantillasCount : '';
       const iconName = ICON_MAP[t.icon] || t.icon || 'circle';
-      return `<div class="col-12 col-sm-6 col-lg-4 col-xl-4" data-nombre="${escapeHtml(t.nombre)}">
+      return `<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4" data-nombre="${escapeHtml(t.nombre)}">
         <article class="neu h-100 d-flex flex-column pb-3">
           <div class="preview neu-in">
             ${ok
