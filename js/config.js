@@ -46,10 +46,14 @@ export const CONFIG = {
     { nombre: 'Electricista', icon: 'zap', url: 'https://elecweb.chach.app', plantillasCount: 10 },
     { nombre: 'Bares', icon: 'glasses', url: 'https://barweb.chach.app', plantillasCount: 10 },
     { nombre: 'Biblioteca', icon: 'book', url: 'https://libweb.chach.app', plantillasCount: 10 },
-    { nombre: 'Gimnasio CrossFit', icon: 'dumbbell', url: '', plantillasCount: 8 },
+    { nombre: 'Deportes o Deportista', icon: 'dumbbell', url: '', plantillasCount: 8 },
     { nombre: 'Pintor', icon: 'pen', url: 'https://pinweb.chach.app', plantillasCount: 9 },
     { nombre: 'Reparación de equipos', icon: 'wrench', url: 'https://reparweb.chach.app', plantillasCount: 10 },
-    { nombre: 'Venta de celulares', icon: 'phone', url: 'https://celuweb.chach.app', plantillasCount: 12 }
+    { nombre: 'Venta de celulares', icon: 'phone', url: 'https://celuweb.chach.app', plantillasCount: 12 },
+    { nombre: 'Pizzería', icon: 'utensils', url: 'https://pizzaweb.chach.app', plantillasCount: 10 },
+    { nombre: 'Heladería', icon: 'droplets', url: 'https://heladoweb.chach.app', plantillasCount: 8 },
+    { nombre: 'Carnicería', icon: 'utensils', url: 'https://carnicweb.chach.app', plantillasCount: 9 },
+    { nombre: 'Enfermero', icon: 'heart', url: 'https://enfermweb.chach.app', plantillasCount: 10 }
   ]
 };
 

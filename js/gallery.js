@@ -32,7 +32,6 @@ export class Gallery {
 
     $('#grid').innerHTML = lista.map((t, i) => {
       const ok = !!t.url;
-      const count = (t.plantillasCount != null) ? t.plantillasCount : '';
       const iconName = ICON_MAP[t.icon] || t.icon || 'circle';
       return `<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4" data-nombre="${escapeHtml(t.nombre)}">
         <article class="neu h-100 d-flex flex-column pb-3">
@@ -41,12 +40,11 @@ export class Gallery {
               ? `<iframe data-src="${escapeHtml(t.url)}" loading="lazy" tabindex="-1" title="Vista previa de ${escapeHtml(t.nombre)}"></iframe>`
               : `<div class="empty">Sin enlace disponible</div>`
             }
+            ${ok ? `<button class="neu-btn btn-float" data-ver="${i}" style="padding:.4rem .8rem;font-size:.85rem">Ver</button>` : ''}
           </div>
-           <div class="d-flex align-items-center gap-2 px-3 mt-3">
-             <button class="neu-btn ${ok ? '' : 'disabled'} " data-ver="${i}" ${ok ? '' : 'disabled'} style="padding:.3rem .6rem;font-size:.8rem">Ver</button>
+           <div class="text-center px-3 mt-3">
              <h3 class="h6 fw-bold m-0">${escapeHtml(t.nombre)} <i data-lucide="${escapeHtml(iconName)}" style="width:16px;height:16px;vertical-align:middle"></i></h3>
            </div>
-           ${count !== '' ? `<p class="small text-center opacity-75 mb-2 mt-2">${count} plantillas</p>` : ''}
       </div>`;
     }).join('');
 

@@ -19,15 +19,22 @@ class App {
     this.setupComponents();
     this.setupEventListeners();
     this.loadSavedState();
+    // Desregistrar Service Worker existente
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js').catch(() => {});
+      navigator.serviceWorker.getRegistrations().then(registrations => {
+        registrations.forEach(registration => registration.unregister());
+      });
     }
   }
 
   setupUI() {
+    console.log('setupUI: Iniciando configuración de UI');
+    console.log('setupUI: Elementos en DOM:', document.querySelectorAll('*').length);
     const btnRegresar = document.getElementById('btnRegresar');
+    console.log('setupUI: btnRegresar encontrado:', !!btnRegresar);
     if (btnRegresar) {
       btnRegresar.href = CONFIG.CREAWEB_URL;
+      console.log('setupUI: href actualizado a:', CONFIG.CREAWEB_URL);
     } else {
       console.warn('setupUI: elemento #btnRegresar no encontrado en el DOM');
     }
@@ -57,16 +64,33 @@ class App {
 
   async previewTemplate(template) {
     try {
-      const vistaTitulo = $('#vistaTitulo');
-      if (vistaTitulo) vistaTitulo.textContent = template.nombre;
       const vistaFrame = $('#vistaFrame');
+      const vistaLoader = $('#vistaLoader');
       if (!vistaFrame) throw new Error('Iframe de vista previa no encontrado');
+
+      // Mostrar loader
+      if (vistaLoader) vistaLoader.style.display = 'flex';
+
+      // Mostrar modal
+      this.modalPreview.show();
+
       // Cargar el iframe directamente evita problemas de CORS con dominios externos
       vistaFrame.src = template.url;
-      this.modalPreview.show();
+
+      // Ocultar loader cuando el iframe cargue
+      vistaFrame.onload = () => {
+        if (vistaLoader) vistaLoader.style.display = 'none';
+      };
+
+      // Timeout para ocultar loader si tarda mucho
+      setTimeout(() => {
+        if (vistaLoader) vistaLoader.style.display = 'none';
+      }, 5000);
     } catch (err) {
       this.showNotification('No se pudo cargar la plantilla. Revisa tu conexión.');
       console.error(err);
+      const vistaLoader = $('#vistaLoader');
+      if (vistaLoader) vistaLoader.style.display = 'none';
     }
   }
 

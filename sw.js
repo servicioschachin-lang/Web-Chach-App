@@ -1,4 +1,4 @@
-const CACHE = 'creaweb-chach-v2';
+const CACHE = 'creaweb-chach-v3';
 const ASSETS = [
   './',
   './index.html',
