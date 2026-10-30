@@ -1,9 +1,9 @@
 :root {
-  --bg: #0393e6da;
-  --sh1: #102a43;
-  --sh2: #ffffff;
-  --tx: #ffffff;
-  --ac: #4f6df5;
+  --bg: #eee4e4da;
+  --sh1: #282b2c;
+  --sh2: #2e2e30;
+  --tx: #0c0a0a;
+  --ac: #6b7280;
 }
 
 html, body {
